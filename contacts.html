@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти – Riviera</title>
+    <meta name="description" content="Контактна інформація ресторану Riviera, адреса, графік роботи, телефон та форма для бронювання столика.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/favicon.png" alt="Логотип Riviera" class="site-logo">
+                <span>Riviera</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
+                aria-controls="mainMenu" aria-expanded="false" aria-label="Відкрити меню">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Головна</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Про нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Меню</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contacts.html">Контакти</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="contacts-hero text-center">
+        <div class="container">
+            <span class="hero-label">Зв’язок з нами</span>
+            <h1>Контакти ресторану Riviera</h1>
+            <p>
+                Залиште заявку для бронювання столика або зв’яжіться з нами
+                зручним для вас способом.
+            </p>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <div class="contact-info-box">
+                        <h2>Контактна інформація</h2>
+
+                        <div class="contact-info-item">
+                            <h3>Адреса</h3>
+                            <p>м. Одеса, вул. Морська, 12</p>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <h3>Графік роботи</h3>
+                            <p>Щодня: 10:00 – 22:00</p>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <h3>Телефон</h3>
+                            <p>
+                                <a href="tel:+380991234567">+380 99 123 45 67</a>
+                            </p>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <h3>Email</h3>
+                            <p>
+                                <a href="mailto:riviera.restaurant@gmail.com">riviera.restaurant@gmail.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="contact-form-box">
+                        <h2>Форма бронювання</h2>
+                        <p>
+                            Заповніть форму, і ми зв’яжемося з вами для підтвердження бронювання.
+                        </p>
+
+                        <form id="bookingForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="userName" class="form-label">Ім’я</label>
+                                    <input type="text" class="form-control" id="userName" name="userName" autocomplete="name" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="userPhone" class="form-label">Телефон</label>
+                                    <input type="tel" class="form-control" id="userPhone" name="userPhone" autocomplete="tel" inputmode="tel" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="bookingDate" class="form-label">Дата</label>
+                                    <input type="date" class="form-control" id="bookingDate" name="bookingDate" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="guestCount" class="form-label">Кількість гостей</label>
+                                    <input type="number" class="form-control" id="guestCount" name="guestCount" min="1" max="20" inputmode="numeric" autocomplete="off" required>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="userMessage" class="form-label">Повідомлення</label>
+                                    <textarea class="form-control" id="userMessage" name="userMessage" rows="4" autocomplete="off" placeholder="Додаткові побажання"></textarea>
+                                </div>
+
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-warning">Надіслати заявку</button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div id="formMessage" class="form-message mt-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container text-center">
+        <p class="mb-0">© 2026 Riviera. Ресторан біля моря.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
